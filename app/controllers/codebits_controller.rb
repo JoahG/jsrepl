@@ -11,6 +11,6 @@ class CodebitsController < ApplicationController
 	def create
 		@codebit = Codebit.new(params[:codebit])
 		@codebit.save
-		redirect_to show_path(codebit.id)
+		redirect_to show_path(@codebit.id)
 	end
 end
