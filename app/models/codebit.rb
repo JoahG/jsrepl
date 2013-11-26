@@ -7,6 +7,6 @@ class Codebit < ActiveRecord::Base
 	def gen_slug
 		begin
 			self.slug = ('a'..'z').to_a.shuffle[0,3].join
-		end while self.exists?(:conditions => {:slug => self.slug})
+		end while Codebit.find_by_slug(self.slug)
 	end
 end
