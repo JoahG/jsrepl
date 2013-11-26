@@ -61,7 +61,7 @@ h1 .w {
 	top: 37px;
 }
 
-a#run {
+a#run, a#save {
 	font-family: "Monoco", monospace;
 	color: white;
 	padding: 2px 5px;
