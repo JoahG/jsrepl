@@ -48,14 +48,14 @@ h1 .w {
 	top: 37px;
 }
 
-a#run {
+a#run, a#save {
 	font-family: "Monoco", monospace;
 	color: white;
 	padding: 2px 5px;
 	background-color: black;
 }
 
-#input, #output {
+#codebit_code, #output {
 	font-family: "Monoco", monospace;
 	width: 48%;
 	display:inline-block;
@@ -67,20 +67,20 @@ a#run {
 	position:absolute;
 	z-index: 0;
 	bottom: -55px;
+	overflow: scroll;
 }
 
-#input {
+#codebit_code {
 	background-color: #ddd;
 	color: #333;
 	border: 0;
 	left: 0;
 	top: 0;
 	resize: none;
-	overflow: scroll;
 	cursor: text;
 }
 
-#input:focus {
+#codebit_code:focus {
 	border: 0;
 	box-shadow: 0;
 	outline: none;
