@@ -5,7 +5,7 @@ class CodebitsController < ApplicationController
 	end
 
 	def show
-		@codebit = Codebit.find(params[:id])
+		@codebit = Codebit.find_by_slug(params[:slug])
 	end
 
 	def create
