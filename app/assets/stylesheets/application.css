@@ -68,7 +68,7 @@ a#run {
 	background-color: black;
 }
 
-#input, #output {
+#codebit_code, #output {
 	font-family: "Monoco", monospace;
 	width: 48%;
 	display:inline-block;
@@ -82,7 +82,7 @@ a#run {
 	bottom: -55px;
 }
 
-#input {
+#codebit_code {
 	background-color: #ddd;
 	color: #333;
 	border: 0;
@@ -93,7 +93,7 @@ a#run {
 	cursor: text;
 }
 
-#input:focus {
+#codebit_code:focus {
 	border: 0;
 	box-shadow: 0;
 	outline: none;
