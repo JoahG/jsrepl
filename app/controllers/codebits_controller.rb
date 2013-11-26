@@ -5,12 +5,16 @@ class CodebitsController < ApplicationController
 	end
 
 	def show
-		@codebit = Codebit.find_by_slug(params[:slug])
+		if Codebit.find_by_slug(params[:slug])
+			@codebit = Codebit.find_by_slug(params[:slug])
+		else
+			redirect_to root_url
+		end
 	end
 
 	def create
 		@codebit = Codebit.new(params[:codebit])
 		@codebit.save
-		redirect_to show_path(@codebit.id)
+		redirect_to show_path(@codebit.slug)
 	end
 end
