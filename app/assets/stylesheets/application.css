@@ -72,10 +72,10 @@ a#run, a#save {
 	font-family: "Monoco", monospace;
 	width: 48%;
 	display:inline-block;
-	height: 90%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	padding-top: 5%;
+	padding-top: 55px;
 	padding-left: 2%;
 	position:absolute;
 	z-index: 0;

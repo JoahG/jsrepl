@@ -19,6 +19,12 @@ console.log = function(m) {
 }
 
 $(document).ready(function() {
+	sizeBoxes = function() {
+		$("#codebit_code, #output").height($(window).height()-55)
+	}
+
+	sizeBoxes()
+
 	$("#codebit_code").focus();
 
 	$("#run").click(function(){
@@ -47,4 +53,6 @@ $(document).ready(function() {
 			$(this).get(0).selectionEnd = start + 1;
 		}
 	});
+
+	$(window).resize(sizeBoxes())
 });
