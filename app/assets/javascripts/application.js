@@ -19,24 +19,24 @@ console.log = function(m) {
 }
 
 $(document).ready(function() {
-	$("#input").focus();
+	$("#codebit_code").focus();
 
 	$("#run").click(function(){
-		if ($("#input").val().length > 0) {
+		if ($("#codebit_code").val().length > 0) {
 			$(".removable").remove()
 		}
 		try {
-			eval($("#input").val())
+			eval($("#codebit_code").val())
 		} catch(err) {
 			console.log(err)
 		}
 	});
 
 	$("#save").click(function() {
-		$("#codebit_form").submit();
+		$("form").submit();
 	})
 
-	$(document).delegate('#input', 'keydown', function(e) {
+	$(document).delegate('#codebit_code', 'keydown', function(e) {
 		var keyCode = e.keyCode || e.which;
 		if (keyCode == 9) {
 			e.preventDefault();
