@@ -1,5 +1,7 @@
 class CodebitsController < ApplicationController
 	def index 
+		@codebit = Codebit.new
+		@codebit.code = ''
 	end
 
 	def show
