@@ -11,3 +11,107 @@
  *= require_self
  *= require_tree .
  */
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+button,fieldset,form,input,legend,textarea,select{margin:0;padding:0}
+fieldset{border:0}
+a,a *{cursor:pointer}
+div{margin:0;padding:0;background-color:transparent;}
+hr,img{border:0}
+applet,iframe,object{border:0;margin:0;padding:0}
+button,input[type=button],input[type=image],input[type=reset],input[type=submit],label{cursor:pointer;}
+ul,li{list-style:none;margin:0;padding:0;}
+strong{font-weight:bold;}
+em{font-style:italic;}
+
+body {
+	overflow: hidden;
+}
+
+#run_wrapper, h1 {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+h1 {
+	font-family: "Monoco", monospace;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 0;
+	color: white;
+	cursor: default;
+}
+
+h1 .b {
+	color: black;
+}
+
+h1 .w {
+	color: #ddd;
+}
+
+#run_wrapper {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 37px;
+}
+
+a#run {
+	font-family: "Monoco", monospace;
+	color: white;
+	padding: 2px 5px;
+	background-color: black;
+}
+
+#input, #output {
+	font-family: "Monoco", monospace;
+	width: 48%;
+	display:inline-block;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	padding-top: 55px;
+	padding-left: 2%;
+	position:absolute;
+	z-index: 0;
+	bottom: -55px;
+}
+
+#input {
+	background-color: #ddd;
+	color: #333;
+	border: 0;
+	left: 0;
+	top: 0;
+	resize: none;
+	overflow: scroll;
+	cursor: text;
+}
+
+#input:focus {
+	border: 0;
+	box-shadow: 0;
+	outline: none;
+}
+
+
+#output {
+	background-color: black;
+	color: lightgreen;
+	top:0;
+	right:0;
+}
+
+#output .line {
+	display: block;
+	min-height: 15px;
+}
+
+#output .line::before {
+	content: '> ';
+}

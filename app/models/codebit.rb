@@ -1,3 +1,3 @@
 class Codebit < ActiveRecord::Base
-  attr_accessible :code, :slug
+	attr_accessible :code, :slug
 end
