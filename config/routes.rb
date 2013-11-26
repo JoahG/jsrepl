@@ -1,5 +1,5 @@
 New::Application.routes.draw do
-  get "codebits/:id" => "codebit#show", :as => "show"
+  get "/:id" => "codebits#show", :as => "show"
   root :to => 'codebits#index'
   resources :codebits
 end
