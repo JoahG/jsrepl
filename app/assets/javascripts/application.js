@@ -54,5 +54,5 @@ $(document).ready(function() {
 		}
 	});
 
-	$(window).resize(sizeBoxes())
+	$(window).resize(function(){sizeBoxes()})
 });
