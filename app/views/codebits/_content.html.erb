@@ -2,7 +2,9 @@
 <div id="run_wrapper">
 	<a id="save">save &laquo;</a><a id="run">run &raquo;</a>
 </div>
-
+<%= form_for Codebit.new, do |f| %>
+	<%= f.text_area, :value => @codebit.code %>
+<% end %>
 <div id="output">
 	<span class="line removable"></span>
 </div>
