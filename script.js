@@ -41,6 +41,12 @@ $(document).ready(function() {
 			$("#run").click();
 			e.preventDefault();
 		}
+
+
+		if (e.ctrlKey && keyCode == 83 || e.metaKey && keyCode == 83) {
+			$("#save").click();
+			e.preventDefault();
+		}
 	});
 
 	$(window).resize(function(){sizeBoxes()})
