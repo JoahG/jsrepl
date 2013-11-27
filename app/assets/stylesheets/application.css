@@ -52,13 +52,21 @@ h1 .w {
 	color: #ddd;
 }
 
-#run_wrapper {
-	width: 100%;
-	text-align: center;
+#run_wrapper, #save_wrapper {
+	width: 50%;
 	position: absolute;
 	z-index: 1;
-	left: 0;
 	top: 37px;
+}
+
+#run_wrapper {
+	right: 0;
+	text-align: left;
+}
+
+#save_wrapper {
+	left: 0;
+	text-align: right;
 }
 
 a#run, a#save {
