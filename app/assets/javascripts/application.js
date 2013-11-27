@@ -16,6 +16,7 @@
 
 console.log = function(m) {
 	$("#output").append("<span class='line'>"+m+"</span>")
+	$("#output").scrollTop($("#output")[0].scrollHeight);
 }
 
 $(document).ready(function() {
