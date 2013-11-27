@@ -14,7 +14,11 @@ class CodebitsController < ApplicationController
 
 	def create
 		@codebit = Codebit.new(params[:codebit])
-		@codebit.save
+		if !Codebit.find_by_code(@codebit.code)
+			@codebit.save
+		else
+			@codebit = Codebit.find_by_code(@codebit.code)
+		end
 		redirect_to show_path(@codebit.slug)
 	end
 end
