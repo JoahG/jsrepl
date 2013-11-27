@@ -20,7 +20,7 @@ console.log = function(m) {
 
 $(document).ready(function() {
 	sizeBoxes = function() {
-		$("#codebit_code, #output").height($(window).height()-55)
+		$("#codebit_code, #output").height($(window).height()-60)
 	}
 
 	sizeBoxes()
