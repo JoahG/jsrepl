@@ -4,7 +4,7 @@ console.log = function(m) {
 
 $(document).ready(function() {
 	sizeBoxes = function() {
-		$("#codebit_code, #output").height($(window).height()-55)
+		$("#codebit_code, #output").height($(window).height()-60)
 	}
 
 	sizeBoxes()
@@ -22,7 +22,11 @@ $(document).ready(function() {
 		}
 	});
 
-	$(document).delegate('#codebit_code', 'keydown', function(e) {
+	$("#save").click(function() {
+		$("form").submit();
+	})
+
+	$("#codebit_code").keydown(function(e) {
 		var keyCode = e.keyCode || e.which;
 		if (keyCode == 9) {
 			e.preventDefault();
@@ -31,6 +35,11 @@ $(document).ready(function() {
 			$(this).val($(this).val().substring(0, start) + "\t" + $(this).val().substring(end));
 			$(this).get(0).selectionStart =
 			$(this).get(0).selectionEnd = start + 1;
+		}
+
+		if (e.ctrlKey && keyCode == 13 || e.metaKey && keyCode == 13) {
+			$("#run").click();
+			e.preventDefault();
 		}
 	});
 
