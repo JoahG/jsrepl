@@ -42,7 +42,7 @@ $(document).ready(function() {
 		$("form").submit();
 	})
 
-	$(document).delegate('#codebit_code', 'keydown', function(e) {
+	$("#codebit_code").keydown(function(e) {
 		var keyCode = e.keyCode || e.which;
 		if (keyCode == 9) {
 			e.preventDefault();
@@ -51,6 +51,11 @@ $(document).ready(function() {
 			$(this).val($(this).val().substring(0, start) + "\t" + $(this).val().substring(end));
 			$(this).get(0).selectionStart =
 			$(this).get(0).selectionEnd = start + 1;
+		}
+
+		if (e.ctrlKey && keyCode == 13 || e.metaKey && keyCode == 13) {
+			$("#run").click();
+			e.preventDefault();
 		}
 	});
 
