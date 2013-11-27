@@ -25,6 +25,7 @@ em{font-style:italic;}
 
 body {
 	overflow: hidden;
+	background-color: #ddd;
 }
 
 #run_wrapper, h1 {
@@ -71,9 +72,17 @@ h1 .w {
 
 a#run, a#save {
 	font-family: "Monoco", monospace;
-	color: white;
 	padding: 2px 5px;
+}
+
+a#run {
+	background-color: #ddd;
+	color: black;
+}
+
+a#save {
 	background-color: black;
+	color: #ddd;
 }
 
 #codebit_code, #output {
