@@ -1,5 +1,4 @@
-jsrepl
-======
+#jsrepl [![Build Status](https://travis-ci.org/JoahG/jsrepl.png?branch=heroku)](https://travis-ci.org/JoahG/jsrepl)
 
 A project I made out of curiosity of its difficulty, this is a basic Javascript [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
 
